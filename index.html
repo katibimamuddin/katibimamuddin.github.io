@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Katib Imamuddin — Arabic Calligraphy & Design</title>
+<meta name="description" content="Katib Imamuddin — specialist in Arabic calligraphy and bespoke graphic design. Posters, pamphlets, calendars, wedding stationery, and more." />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <a href="#hero" class="nav-logo">Katib Imamuddin</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-bg-calligraphy" aria-hidden="true">
+    <span>كاتب</span>
+  </div>
+  <div class="hero-ornament"></div>
+  <div class="hero-arabic">كاتب عمادالدين</div>
+  <h1 class="hero-name">Katib <span>Imamuddin</span></h1>
+  <p class="hero-tagline">Arabic Calligraphy &amp; Bespoke Graphic Design</p>
+  <a href="#portfolio" class="hero-cta">View Portfolio</a>
+  <div class="scroll-hint" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-label">About</p>
+        <h2 class="section-title">Where Ink Meets<br />Tradition</h2>
+        <div class="section-divider"></div>
+        <p>
+          Imamuddin is a specialist in <em>Arabic calligraphy</em> and bespoke graphic design,
+          bringing the timeless art of the written word into contemporary visual communication.
+        </p>
+        <p>
+          Every stroke is deliberate. Every composition carries <em>meaning and weight</em> —
+          whether it graces a wedding invitation, adorns a business calendar,
+          or elevates a brand identity.
+        </p>
+        <p>
+          Working with clients across a range of print and digital media, Imamuddin crafts
+          pieces that honour the classical tradition while serving modern purpose.
+        </p>
+        <div class="services-list">
+          <span class="service-tag">Pamphlets &amp; Brochures</span>
+          <span class="service-tag">Posters &amp; Banners</span>
+          <span class="service-tag">Calendars</span>
+          <span class="service-tag">Receipt Books</span>
+          <span class="service-tag">Wedding Stationery</span>
+          <span class="service-tag">Brand Identity</span>
+          <span class="service-tag">Certificates</span>
+          <span class="service-tag">Custom Artwork</span>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="calligraphy-frame">
+          <span class="arabic-large">بِسْمِ ٱللَّٰهِ</span>
+          <span class="arabic-sub">In the name of God</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PORTFOLIO ── -->
+<section id="portfolio">
+  <div class="section-inner">
+    <p class="section-label">Portfolio</p>
+    <h2 class="section-title">Selected Works</h2>
+    <div class="section-divider"></div>
+    <p style="color:var(--muted); font-size:1rem; margin-bottom:2rem; font-style:italic;">
+      See something you love? Hover any piece and request something similar.
+    </p>
+
+    <!-- Filter buttons — populated dynamically by portfolio.js -->
+    <div class="portfolio-filter" id="filterButtons">
+      <button class="filter-btn active" data-filter="all">All</button>
+    </div>
+
+    <!-- Portfolio grid — populated dynamically by portfolio.js -->
+    <div class="portfolio-grid" id="portfolioGrid">
+      <div class="portfolio-loading">Loading portfolio…</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Commission a Piece</h2>
+    <div class="section-divider"></div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-item">
+          <div class="contact-icon">✉</div>
+          <div class="contact-item-text">
+            <h4>Email</h4>
+            <a href="mailto:your@email.com">your@email.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">☏</div>
+          <div class="contact-item-text">
+            <h4>Phone / WhatsApp</h4>
+            <a href="tel:+000000000000">+00 000 000 0000</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">◉</div>
+          <div class="contact-item-text">
+            <h4>Instagram</h4>
+            <a href="https://instagram.com/katib.imamuddin" target="_blank" rel="noopener">@katib.imamuddin</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">⌖</div>
+          <div class="contact-item-text">
+            <h4>Location</h4>
+            <p>Your City, Country</p>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Project Type (e.g. Wedding Poster)" />
+        <textarea placeholder="Tell me about your project…"></textarea>
+        <button type="submit">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span class="footer-brand">Katib Imamuddin</span>
+  <p>Crafted with devotion — Arabic Calligraphy &amp; Design</p>
+  <span class="footer-arabic" aria-hidden="true">كاتب</span>
+</footer>
+
+<!-- ── REQUEST MODAL ── -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
+    <h2 id="modalTitle">Request Similar Work</h2>
+    <p class="modal-ref" id="modalRef">Inspired by: —</p>
+    <form id="modalForm" onsubmit="handleModalSubmit(event)">
+      <input type="text" id="reqName" placeholder="Your Name" required />
+      <input type="email" id="reqEmail" placeholder="Your Email" required />
+      <input type="tel" id="reqPhone" placeholder="Phone / WhatsApp (optional)" />
+      <select id="reqType">
+        <option value="" disabled selected>Select Project Type</option>
+        <option>Poster</option>
+        <option>Pamphlet / Brochure</option>
+        <option>Calendar</option>
+        <option>Receipt Book</option>
+        <option>Wedding Stationery</option>
+        <option>Certificate</option>
+        <option>Custom Artwork</option>
+        <option>Brand Identity</option>
+        <option>Other</option>
+      </select>
+      <textarea id="reqNotes" placeholder="Any specific text, colours, size requirements…"></textarea>
+      <button type="submit" class="modal-submit">Send Request →</button>
+    </form>
+    <div id="modal-success">
+      <div class="check">✦</div>
+      <p>Your request has been received.<br />Imamuddin will be in touch shortly.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"></div>
+
+<!-- ── SCRIPTS ── -->
+<script src="js/portfolio.js"></script>
+
+</body>
+</html>

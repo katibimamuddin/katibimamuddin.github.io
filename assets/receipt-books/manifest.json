@@ -1,0 +1,12 @@
+{
+  "category": "Receipt Books",
+  "description": "Professionally designed receipt books with custom Arabic business name, ornamental border motifs, and elegant typography.",
+  "files": [
+    {
+      "filename": "sample-receipt-1.jpg",
+      "title": "Business Receipt Book",
+      "description": "Custom receipt book with Arabic business name, border motifs, and sequential numbering.",
+      "type": "image"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "category": "Pamphlets & Brochures",
+  "description": "Tri-fold and bi-fold pamphlets, brochures, and informational booklets with Arabic calligraphic design.",
+  "files": [
+    {
+      "filename": "sample-pamphlet-1.jpg",
+      "title": "Event Pamphlet",
+      "description": "Elegant tri-fold pamphlet with calligraphic header. Ideal for events and announcements.",
+      "type": "image"
+    }
+  ]
+}

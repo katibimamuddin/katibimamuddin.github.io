@@ -1,0 +1,24 @@
+{
+  "category": "Posters",
+  "description": "Statement posters featuring classical Arabic calligraphy scripts including Thuluth, Naskh, and Kufic.",
+  "files": [
+    {
+      "filename": "sample-poster-1.jpg",
+      "title": "Basmala Composition",
+      "description": "Gold-on-black poster featuring the Basmala in classical Thuluth script. Available in A2/A3.",
+      "type": "image"
+    },
+    {
+      "filename": "sample-poster-2.jpg",
+      "title": "Surah Al-Fatiha",
+      "description": "Naskh script rendering of Surah Al-Fatiha with geometric border. A statement piece for homes and offices.",
+      "type": "image"
+    },
+    {
+      "filename": "sample-poster-3.jpg",
+      "title": "Geometric Kufic",
+      "description": "Abstract kufic script rendered as interlocking geometric forms. Modern art meets classical calligraphy.",
+      "type": "image"
+    }
+  ]
+}
