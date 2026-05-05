@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   bindFilterButtons();
   bindModal();
   bindContactForm();
+  bindModalForm();
 });
 
 // ── LOAD ALL MANIFESTS ──
@@ -198,61 +199,119 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
+// ── MODAL FORM SUBMISSION (using iframe method) ──
+function bindModalForm() {
+  const form = document.getElementById('modalForm');
+  if (!form) return;
+  form.addEventListener('submit', handleModalSubmit);
+}
+
 async function handleModalSubmit(e) {
   e.preventDefault();
   const form = document.getElementById('modalForm');
   const btn = form.querySelector('button[type="submit"]');
+  const originalText = btn.textContent;
+  
   btn.textContent = 'Sending…';
   btn.disabled = true;
+  
   try {
-    const res = await fetch('https://formspree.io/f/mkoybgqn', {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
-    if (res.ok) {
-      form.style.display = 'none';
-      document.getElementById('modal-success').style.display = 'block';
-      setTimeout(closeModal, 2800);
-    } else {
-      showToast('Something went wrong — please email directly.');
-    }
-  } catch {
+    // Create a hidden iframe for form submission
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.name = 'modal-form-target-' + Date.now();
+    document.body.appendChild(iframe);
+    
+    // Set form to submit to iframe
+    const originalAction = form.action;
+    const originalMethod = form.method;
+    const originalTarget = form.target;
+    
+    form.action = 'https://formspree.io/f/mkoybgqn';
+    form.method = 'POST';
+    form.target = iframe.name;
+    
+    // Submit the form
+    form.submit();
+    
+    // Wait a bit for submission to process
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    // Show success message
+    form.style.display = 'none';
+    document.getElementById('modal-success').style.display = 'block';
+    
+    // Reset form for next use
+    form.action = originalAction;
+    form.method = originalMethod;
+    form.target = originalTarget;
+    form.reset();
+    
+    // Close modal after showing success
+    setTimeout(closeModal, 2800);
+    
+    // Clean up iframe
+    setTimeout(() => iframe.remove(), 3000);
+    
+  } catch (error) {
+    console.error('Modal form submission error:', error);
     showToast('Something went wrong — please email directly.');
-  } finally {
-    btn.textContent = 'Send Request →';
+    btn.textContent = originalText;
     btn.disabled = false;
   }
 }
 
-// ── CONTACT FORM ──
+// ── CONTACT FORM (using iframe method) ──
 function bindContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
-    try {
-      const res = await fetch('https://formspree.io/f/mkoybgqn', {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) {
-        showToast('Message sent! Imamuddin will be in touch soon. ✦');
-        form.reset();
-      } else {
-        showToast('Something went wrong — please email directly.');
-      }
-    } catch {
-      showToast('Something went wrong — please email directly.');
-    } finally {
-      btn.textContent = 'Send Enquiry';
-      btn.disabled = false;
-    }
-  });
+  form.addEventListener('submit', handleContactFormSubmit);
+}
+
+async function handleContactFormSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('contactForm');
+  const btn = form.querySelector('button[type="submit"]');
+  const originalText = btn.textContent;
+  
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  
+  try {
+    // Create a hidden iframe for form submission
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.name = 'contact-form-target-' + Date.now();
+    document.body.appendChild(iframe);
+    
+    // Set form to submit to iframe
+    const originalTarget = form.target;
+    form.target = iframe.name;
+    
+    // Submit the form
+    form.submit();
+    
+    // Wait a bit for submission to process
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    // Show success message
+    showToast('Message sent! Imamuddin will be in touch soon. ✦');
+    
+    // Reset form
+    form.target = originalTarget;
+    form.reset();
+    btn.textContent = originalText;
+    btn.disabled = false;
+    
+    // Clean up iframe
+    setTimeout(() => iframe.remove(), 3000);
+    
+  } catch (error) {
+    console.error('Contact form submission error:', error);
+    showToast('Something went wrong — please email directly.');
+    btn.textContent = originalText;
+    btn.disabled = false;
+  }
 }
 
 // ── TOAST ──
