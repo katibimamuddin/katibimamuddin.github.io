@@ -3,16 +3,16 @@
   "description": "Wall and desk calendars featuring a different calligraphic composition for each month, with dual Hijri/Gregorian dates.",
   "files": [
     {
-      "filename": "sample-calendar-1.jpg",
-      "title": "Hijri Calendar 1446",
-      "description": "Wall calendar with a unique calligraphic composition for each month. Dual Hijri/Gregorian dates.",
+      "filename": "calender-1.jpg",
+      "title": "Calendars Sample",
+      "description": "Some of the previous calendars for my clients.",
       "type": "image"
     },
     {
-  "filename": "calender-1.jpg",
-  "title": "Calenders Sample",
-  "description": "Some of the previous calenders for my clients.",
-  "type": "image"
-}
+      "filename": "calender-2.jpeg",
+      "title": "Hijri Calendar 1446",
+      "description": "Wall calendar with a unique calligraphic composition for each month. Dual Hijri/Gregorian dates.",
+      "type": "image"
+    }
   ]
 }
