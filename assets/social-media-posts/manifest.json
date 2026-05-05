@@ -1,0 +1,12 @@
+{
+  "category": "Social Media Posts",
+  "description": "Posts for the social media handles of my clients.",
+  "files": [
+    {
+      "filename": "sample-wedding-1.jpg",
+      "title": "Nikah Invitation",
+      "description": "Bespoke nikah invitation with Arabic calligraphy header, ornamental borders, and dual-language layout.",
+      "type": "image"
+    }
+  ]
+}
