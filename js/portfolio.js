@@ -24,6 +24,7 @@ const CATEGORIES = [
   { folder: 'certificates',      label: 'Certificates',       filter: 'certificates' },
   { folder: 'custom-artwork',    label: 'Custom Artwork',     filter: 'custom-artwork' },
   { folder: 'brand-identity',    label: 'Brand Identity',     filter: 'brand-identity' },
+  { folder: 'social-media-posts',    label: 'Social Media Posts',     filter: 'social-media-posts' },
 ];
 
 // ── STATE ──
