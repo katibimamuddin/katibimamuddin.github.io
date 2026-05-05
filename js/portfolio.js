@@ -24,7 +24,6 @@ const CATEGORIES = [
   { folder: 'certificates',      label: 'Certificates',       filter: 'certificates' },
   { folder: 'custom-artwork',    label: 'Custom Artwork',     filter: 'custom-artwork' },
   { folder: 'brand-identity',    label: 'Brand Identity',     filter: 'brand-identity' },
-  { folder: 'social-media-posts',    label: 'Social Media Posts',     filter: 'social-media-posts' },
 ];
 
 // ── STATE ──
@@ -185,7 +184,9 @@ function bindModal() {
 }
 
 function openModal(title, categoryLabel) {
-  document.getElementById('modalRef').textContent = `Inspired by: ${title} (${categoryLabel})`;
+  const ref = `${title} (${categoryLabel})`;
+  document.getElementById('modalRef').textContent = `Inspired by: ${ref}`;
+  document.getElementById('reqRef').value = ref;
   document.getElementById('modalForm').style.display = 'flex';
   document.getElementById('modal-success').style.display = 'none';
   document.getElementById('modalOverlay').classList.add('open');
@@ -197,21 +198,60 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-function handleModalSubmit(e) {
+async function handleModalSubmit(e) {
   e.preventDefault();
-  document.getElementById('modalForm').style.display = 'none';
-  document.getElementById('modal-success').style.display = 'block';
-  setTimeout(closeModal, 2800);
+  const form = document.getElementById('modalForm');
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  try {
+    const res = await fetch('https://formspree.io/f/mkoybgqn', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('modal-success').style.display = 'block';
+      setTimeout(closeModal, 2800);
+    } else {
+      showToast('Something went wrong — please email directly.');
+    }
+  } catch {
+    showToast('Something went wrong — please email directly.');
+  } finally {
+    btn.textContent = 'Send Request →';
+    btn.disabled = false;
+  }
 }
 
 // ── CONTACT FORM ──
 function bindContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    showToast('Message sent! Imamuddin will be in touch soon. ✦');
-    form.reset();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://formspree.io/f/mkoybgqn', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        showToast('Message sent! Imamuddin will be in touch soon. ✦');
+        form.reset();
+      } else {
+        showToast('Something went wrong — please email directly.');
+      }
+    } catch {
+      showToast('Something went wrong — please email directly.');
+    } finally {
+      btn.textContent = 'Send Enquiry';
+      btn.disabled = false;
+    }
   });
 }
 
