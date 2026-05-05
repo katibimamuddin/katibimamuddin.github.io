@@ -137,11 +137,15 @@
           </div>
         </div>
       </div>
-      <form class="contact-form" id="contactForm">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <input type="text" placeholder="Project Type (e.g. Wedding Poster)" />
-        <textarea placeholder="Tell me about your project…"></textarea>
+      <form class="contact-form" id="contactForm"
+            action="https://formspree.io/f/mkoybgqn"
+            method="POST">
+        <input type="text"   name="name"  placeholder="Your Name" required />
+        <input type="email"  name="email"         placeholder="Your Email" required />
+        <input type="text"   name="project_type"  placeholder="Project Type (e.g. Wedding Poster)" />
+        <textarea            name="message"        placeholder="Tell me about your project…"></textarea>
+        <!-- Honeypot spam filter -->
+        <input type="text" name="_gotcha" style="display:none" />
         <button type="submit">Send Enquiry</button>
       </form>
     </div>
@@ -162,10 +166,11 @@
     <h2 id="modalTitle">Request Similar Work</h2>
     <p class="modal-ref" id="modalRef">Inspired by: —</p>
     <form id="modalForm" onsubmit="handleModalSubmit(event)">
-      <input type="text" id="reqName" placeholder="Your Name" required />
-      <input type="email" id="reqEmail" placeholder="Your Email" required />
-      <input type="tel" id="reqPhone" placeholder="Phone / WhatsApp (optional)" />
-      <select id="reqType">
+      <input type="hidden" id="reqRef"   name="inspired_by" />
+      <input type="text"   id="reqName"  name="name"         placeholder="Your Name" required />
+      <input type="email"  id="reqEmail" name="email"        placeholder="Your Email" required />
+      <input type="tel"    id="reqPhone" name="phone"        placeholder="Phone / WhatsApp (optional)" />
+      <select id="reqType" name="project_type">
         <option value="" disabled selected>Select Project Type</option>
         <option>Poster</option>
         <option>Pamphlet / Brochure</option>
@@ -177,7 +182,8 @@
         <option>Brand Identity</option>
         <option>Other</option>
       </select>
-      <textarea id="reqNotes" placeholder="Any specific text, colours, size requirements…"></textarea>
+      <textarea id="reqNotes" name="notes" placeholder="Any specific text, colours, size requirements…"></textarea>
+      <input type="text" name="_gotcha" style="display:none" />
       <button type="submit" class="modal-submit">Send Request →</button>
     </form>
     <div id="modal-success">
