@@ -1,0 +1,99 @@
+/* ── LANGUAGE SWITCHER STYLES ── */
+
+.lang-switcher {
+  position: fixed;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 150;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(42, 111, 201, 0.25);
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+}
+
+.lang-btn {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 3px;
+}
+
+.lang-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.lang-btn.active {
+  background: var(--gold);
+  color: #ffffff;
+  border-color: var(--gold);
+}
+
+/* ── DIRECTION AND FONT ADJUSTMENTS FOR RTL ── */
+
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="ar"] {
+  font-family: 'Noto Naskh Arabic', 'Noto Sans Arabic', serif;
+}
+
+html[lang="ur"] {
+  font-family: 'Noto Sans Urdu', sans-serif;
+}
+
+html[lang="hi"] {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+/* Adjust navigation for RTL */
+html[dir="rtl"] nav {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-links {
+  flex-direction: row-reverse;
+}
+
+/* Adjust about grid for RTL */
+html[dir="rtl"] .about-grid {
+  grid-auto-flow: dense;
+}
+
+/* Adjust contact grid for RTL */
+html[dir="rtl"] .contact-grid {
+  grid-auto-flow: dense;
+}
+
+/* Adjust footer for RTL */
+html[dir="rtl"] footer {
+  flex-direction: row-reverse;
+}
+
+/* Adjust portfolio items for RTL */
+html[dir="rtl"] .portfolio-item-info {
+  flex-direction: row-reverse;
+}
+
+/* Language-specific typography adjustments */
+@media (max-width: 768px) {
+  .lang-switcher {
+    top: auto;
+    bottom: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

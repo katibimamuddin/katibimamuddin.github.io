@@ -16,14 +16,14 @@
 // ── CATEGORY CONFIG ──
 // Maps folder names to display labels and filter keys
 const CATEGORIES = [
-  { folder: 'posters',           label: 'Posters',            filter: 'posters' },
-  { folder: 'pamphlets',         label: 'Pamphlets',          filter: 'pamphlets' },
-  { folder: 'calendars',         label: 'Calendars',          filter: 'calendars' },
-  { folder: 'wedding-stationery',label: 'Wedding Stationery', filter: 'wedding-stationery' },
-  { folder: 'receipt-books',     label: 'Receipt Books',      filter: 'receipt-books' },
-  { folder: 'certificates',      label: 'Certificates',       filter: 'certificates' },
-  { folder: 'custom-artwork',    label: 'Custom Artwork',     filter: 'custom-artwork' },
-  { folder: 'brand-identity',    label: 'Brand Identity',     filter: 'brand-identity' },
+  { folder: 'posters',           label: 'filter.posters',            filter: 'posters' },
+  { folder: 'pamphlets',         label: 'filter.pamphlets',          filter: 'pamphlets' },
+  { folder: 'calendars',         label: 'filter.calendars',          filter: 'calendars' },
+  { folder: 'wedding-stationery',label: 'filter.wedding',            filter: 'wedding-stationery' },
+  { folder: 'receipt-books',     label: 'filter.receipts',           filter: 'receipt-books' },
+  { folder: 'certificates',      label: 'filter.certificates',       filter: 'certificates' },
+  { folder: 'custom-artwork',    label: 'filter.custom',             filter: 'custom-artwork' },
+  { folder: 'brand-identity',    label: 'filter.brand',              filter: 'brand-identity' },
 ];
 
 // ── STATE ──
@@ -42,7 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
 // ── LOAD ALL MANIFESTS ──
 async function loadAllManifests() {
   const grid = document.getElementById('portfolioGrid');
-  grid.innerHTML = '<div class="portfolio-loading">Loading portfolio…</div>';
+  grid.innerHTML = `<div class="portfolio-loading" data-key="portfolio.loading">Loading portfolio…</div>`;
+  
+  // Update loading text after language initialization
+  setTimeout(() => {
+    const loadingEl = grid.querySelector('[data-key="portfolio.loading"]');
+    if (loadingEl && typeof getTranslation === 'function') {
+      loadingEl.textContent = getTranslation('portfolio.loading');
+    }
+  }, 100);
 
   const results = await Promise.allSettled(
     CATEGORIES.map(cat => fetchManifest(cat))
@@ -92,14 +100,17 @@ function buildFilterButtons() {
   );
 
   // Rebuild buttons — always keep "All"
-  container.innerHTML = `<button class="filter-btn active" data-filter="all">All</button>`;
+  const allBtnText = typeof getTranslation === 'function' ? getTranslation('filter.all') : 'All';
+  container.innerHTML = `<button class="filter-btn active" data-filter="all">${allBtnText}</button>`;
 
   activeCats.forEach(cat => {
     const count = allItems.filter(i => i.filter === cat.filter).length;
+    const labelKey = cat.label;
+    const labelText = typeof getTranslation === 'function' ? getTranslation(labelKey) : labelKey;
     const btn = document.createElement('button');
     btn.className = 'filter-btn';
     btn.dataset.filter = cat.filter;
-    btn.textContent = `${cat.label} (${count})`;
+    btn.textContent = `${labelText} (${count})`;
     container.appendChild(btn);
   });
 
@@ -113,12 +124,9 @@ function renderPortfolio(filter) {
   const items = filter === 'all' ? allItems : allItems.filter(i => i.filter === filter);
 
   if (items.length === 0) {
-    grid.innerHTML = `
-      <div class="portfolio-empty">
-        ${filter === 'all'
-          ? 'Portfolio coming soon — check back shortly.'
-          : 'No items in this category yet.'}
-      </div>`;
+    const emptyKey = filter === 'all' ? 'portfolio.empty' : 'portfolio.empty_category';
+    const emptyText = typeof getTranslation === 'function' ? getTranslation(emptyKey) : (filter === 'all' ? 'Portfolio coming soon — check back shortly.' : 'No items in this category yet.');
+    grid.innerHTML = `<div class="portfolio-empty">${emptyText}</div>`;
     return;
   }
 
@@ -147,18 +155,25 @@ function buildItemHTML(item) {
     ? `<a href="${item.path}" target="_blank" rel="noopener" class="btn-open-pdf">View PDF ↗</a>`
     : '';
 
+  // Get category label translation
+  const categoryLabelKey = item.categoryLabel;
+  const categoryLabelText = typeof getTranslation === 'function' ? getTranslation(categoryLabelKey) : categoryLabelKey;
+  
+  // Get button text translation
+  const btnText = typeof getTranslation === 'function' ? getTranslation('form.sendRequest').replace(' →', '') : 'Request Similar';
+
   return `
     <article class="portfolio-item" data-filter="${escapeHTML(item.filter)}">
       ${artworkHTML}
       <div class="portfolio-item-info">
         <h3>${escapeHTML(item.title)}</h3>
-        <span>${escapeHTML(item.categoryLabel)}</span>
+        <span>${escapeHTML(categoryLabelText)}</span>
       </div>
       <div class="portfolio-overlay">
         <p>${escapeHTML(item.description)}</p>
         <button class="btn-like"
-          onclick='openModal(${JSON.stringify(item.title)}, ${JSON.stringify(item.categoryLabel)})'>
-          Request Similar ✦
+          onclick='openModal(${JSON.stringify(item.title)}, ${JSON.stringify(categoryLabelText)})'>
+          ${btnText} ✦
         </button>
         ${overlayExtra}
       </div>
@@ -185,8 +200,9 @@ function bindModal() {
 }
 
 function openModal(title, categoryLabel) {
+  const inspiredText = typeof getTranslation === 'function' ? getTranslation('modal.inspired') : 'Inspired by:';
   const ref = `${title} (${categoryLabel})`;
-  document.getElementById('modalRef').textContent = `Inspired by: ${ref}`;
+  document.getElementById('modalRef').textContent = `${inspiredText} ${ref}`;
   document.getElementById('reqRef').value = ref;
   document.getElementById('modalForm').style.display = 'flex';
   document.getElementById('modal-success').style.display = 'none';
@@ -255,7 +271,8 @@ async function handleModalSubmit(e) {
     
   } catch (error) {
     console.error('Modal form submission error:', error);
-    showToast('Something went wrong — please email directly.');
+    const msg = typeof getTranslation === 'function' ? 'Something went wrong — please email directly.' : 'Something went wrong — please email directly.';
+    showToast(msg);
     btn.textContent = originalText;
     btn.disabled = false;
   }
@@ -295,7 +312,8 @@ async function handleContactFormSubmit(e) {
     await new Promise(resolve => setTimeout(resolve, 1500));
     
     // Show success message
-    showToast('Message sent! Imamuddin will be in touch soon. ✦');
+    const msg = typeof getTranslation === 'function' ? getTranslation('modal.success') : 'Message sent! Imamuddin will be in touch soon. ✦';
+    showToast(msg);
     
     // Reset form
     form.target = originalTarget;

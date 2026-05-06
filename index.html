@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" id="htmlRoot">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Katib Imamuddin — Arabic Calligraphy & Design</title>
 <meta name="description" content="Katib Imamuddin — specialist in Arabic calligraphy and bespoke graphic design. Posters, pamphlets, calendars, wedding stationery, and more." />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Noto+Naskh+Arabic:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+Arabic:wght@400;600&family=Noto+Sans+Urdu:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/languages.css" />
 </head>
 <body>
+
+<!-- ── LANGUAGE SWITCHER ── -->
+<div class="lang-switcher">
+  <button class="lang-btn active" data-lang="en">EN</button>
+  <button class="lang-btn" data-lang="hi">हिन्दी</button>
+  <button class="lang-btn" data-lang="ur">اردو</button>
+  <button class="lang-btn" data-lang="ar">العربية</button>
+</div>
 
 <!-- ── NAVIGATION ── -->
 <nav>
   <a href="#hero" class="nav-logo">Katib Imamuddin</a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about" class="nav-about">About</a></li>
+    <li><a href="#portfolio" class="nav-portfolio">Portfolio</a></li>
+    <li><a href="#contact" class="nav-contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -28,10 +37,10 @@
   <div class="hero-ornament"></div>
   <div class="hero-arabic">كاتب امام الدین</div>
   <h1 class="hero-name">Katib <span>Imamuddin</span></h1>
-  <p class="hero-tagline">Arabic Calligraphy &amp; Bespoke Graphic Design</p>
-  <a href="#portfolio" class="hero-cta">View Portfolio</a>
+  <p class="hero-tagline" data-key="hero.tagline">Arabic Calligraphy &amp; Bespoke Graphic Design</p>
+  <a href="#portfolio" class="hero-cta" data-key="hero.cta">View Portfolio</a>
   <div class="scroll-hint" aria-hidden="true">
-    <span>Scroll</span>
+    <span data-key="scroll.label">Scroll</span>
     <div class="scroll-line"></div>
   </div>
 </section>
@@ -41,37 +50,37 @@
   <div class="section-inner">
     <div class="about-grid">
       <div class="about-text">
-        <p class="section-label">About</p>
-        <h2 class="section-title">Where Ink Meets<br />Tradition</h2>
+        <p class="section-label" data-key="about.label">About</p>
+        <h2 class="section-title" data-key="about.title">Where Ink Meets<br />Tradition</h2>
         <div class="section-divider"></div>
-        <p>
+        <p data-key="about.para1">
           Imamuddin is a specialist in <em>Arabic calligraphy</em> and bespoke graphic design,
           bringing the timeless art of the written word into contemporary visual communication.
         </p>
-        <p>
+        <p data-key="about.para2">
           Every stroke is deliberate. Every composition carries <em>meaning and weight</em> —
           whether it graces a wedding invitation, adorns a business calendar,
           or elevates a brand identity.
         </p>
-        <p>
+        <p data-key="about.para3">
           Working with clients across a range of print and digital media, Imamuddin crafts
           pieces that honour the classical tradition while serving modern purpose.
         </p>
         <div class="services-list">
-          <span class="service-tag">Pamphlets &amp; Brochures</span>
-          <span class="service-tag">Posters &amp; Banners</span>
-          <span class="service-tag">Calendars</span>
-          <span class="service-tag">Receipt Books</span>
-          <span class="service-tag">Wedding Stationery</span>
-          <span class="service-tag">Brand Identity</span>
-          <span class="service-tag">Certificates</span>
-          <span class="service-tag">Custom Artwork</span>
+          <span class="service-tag" data-key="service.pamphlets">Pamphlets &amp; Brochures</span>
+          <span class="service-tag" data-key="service.posters">Posters &amp; Banners</span>
+          <span class="service-tag" data-key="service.calendars">Calendars</span>
+          <span class="service-tag" data-key="service.receipts">Receipt Books</span>
+          <span class="service-tag" data-key="service.wedding">Wedding Stationery</span>
+          <span class="service-tag" data-key="service.brand">Brand Identity</span>
+          <span class="service-tag" data-key="service.certificates">Certificates</span>
+          <span class="service-tag" data-key="service.custom">Custom Artwork</span>
         </div>
       </div>
       <div class="about-visual">
         <div class="calligraphy-frame">
           <span class="arabic-large">بِسْمِ ٱللَّٰهِ</span>
-          <span class="arabic-sub">In the name of God</span>
+          <span class="arabic-sub" data-key="about.arabic">In the name of God</span>
         </div>
       </div>
     </div>
@@ -81,21 +90,21 @@
 <!-- ── PORTFOLIO ── -->
 <section id="portfolio">
   <div class="section-inner">
-    <p class="section-label">Portfolio</p>
-    <h2 class="section-title">Selected Works</h2>
+    <p class="section-label" data-key="portfolio.label">Portfolio</p>
+    <h2 class="section-title" data-key="portfolio.title">Selected Works</h2>
     <div class="section-divider"></div>
-    <p style="color:var(--muted); font-size:1rem; margin-bottom:2rem; font-style:italic;">
+    <p style="color:var(--muted); font-size:1rem; margin-bottom:2rem; font-style:italic;" data-key="portfolio.hint">
       See something you love? Hover any piece and request something similar.
     </p>
 
     <!-- Filter buttons — populated dynamically by portfolio.js -->
     <div class="portfolio-filter" id="filterButtons">
-      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn active" data-filter="all" data-key="filter.all">All</button>
     </div>
 
     <!-- Portfolio grid — populated dynamically by portfolio.js -->
     <div class="portfolio-grid" id="portfolioGrid">
-      <div class="portfolio-loading">Loading portfolio…</div>
+      <div class="portfolio-loading" data-key="portfolio.loading">Loading portfolio…</div>
     </div>
   </div>
 </section>
@@ -103,36 +112,36 @@
 <!-- ── CONTACT ── -->
 <section id="contact">
   <div class="section-inner">
-    <p class="section-label">Contact</p>
-    <h2 class="section-title">Commission a Piece</h2>
+    <p class="section-label" data-key="contact.label">Contact</p>
+    <h2 class="section-title" data-key="contact.title">Commission a Piece</h2>
     <div class="section-divider"></div>
     <div class="contact-grid">
       <div>
         <div class="contact-item">
           <div class="contact-icon">✉</div>
           <div class="contact-item-text">
-            <h4>Email</h4>
-            <a href="mailto:your@email.com">katibimamuddin5@gmail.com</a>
+            <h4 data-key="contact.email.label">Email</h4>
+            <a href="mailto:katibimamuddin5@gmail.com">katibimamuddin5@gmail.com</a>
           </div>
         </div>
         <div class="contact-item">
           <div class="contact-icon">☏</div>
           <div class="contact-item-text">
-            <h4>Phone / WhatsApp</h4>
+            <h4 data-key="contact.phone.label">Phone / WhatsApp</h4>
             <a href="tel:+918299171693">+91-829-917-1693</a>
           </div>
         </div>
         <div class="contact-item">
           <div class="contact-icon">◉</div>
           <div class="contact-item-text">
-            <h4>Instagram</h4>
+            <h4 data-key="contact.instagram.label">Instagram</h4>
             <a href="https://instagram.com/katib_imamuddin" target="_blank" rel="noopener">@katib_imamuddin</a>
           </div>
         </div>
         <div class="contact-item">
           <div class="contact-icon">⌖</div>
           <div class="contact-item-text">
-            <h4>Location</h4>
+            <h4 data-key="contact.location.label">Location</h4>
             <p>Noida, Uttar Pradesh</p>
           </div>
         </div>
@@ -140,14 +149,14 @@
       <form class="contact-form" id="contactForm"
             action="https://formspree.io/f/mkoybgqn"
             method="POST">
-        <input type="text"   name="name"  placeholder="Your Name" required />
-        <input type="email"  name="email"         placeholder="Your Email" required />
-        <input type="tel"    name="phone"        placeholder="Phone / WhatsApp" />
-        <input type="text"   name="project_type"  placeholder="Project Type (e.g. Wedding Poster)" />
-        <textarea            name="message"        placeholder="Tell me about your project…"></textarea>
+        <input type="text"   name="name"  placeholder="Your Name" data-placeholder-key="form.name" required />
+        <input type="email"  name="email" placeholder="Your Email" data-placeholder-key="form.email" required />
+        <input type="tel"    name="phone" placeholder="Phone / WhatsApp" data-placeholder-key="form.phone" />
+        <input type="text"   name="project_type" placeholder="Project Type (e.g. Wedding Poster)" data-placeholder-key="form.project" />
+        <textarea name="message" placeholder="Tell me about your project…" data-placeholder-key="form.message"></textarea>
         <!-- Honeypot spam filter -->
         <input type="text" name="_gotcha" style="display:none" />
-        <button type="submit">Send Enquiry</button>
+        <button type="submit" data-key="form.send">Send Enquiry</button>
       </form>
     </div>
   </div>
@@ -156,7 +165,7 @@
 <!-- ── FOOTER ── -->
 <footer>
   <span class="footer-brand">Katib Imamuddin</span>
-  <p>Crafted with devotion — Arabic Calligraphy &amp; Design</p>
+  <p data-key="footer.text">Crafted with devotion — Arabic Calligraphy &amp; Design</p>
   <span class="footer-arabic" aria-hidden="true">كاتب</span>
 </footer>
 
@@ -164,32 +173,32 @@
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
-    <h2 id="modalTitle">Request Similar Work</h2>
-    <p class="modal-ref" id="modalRef">Inspired by: —</p>
+    <h2 id="modalTitle" data-key="modal.title">Request Similar Work</h2>
+    <p class="modal-ref" id="modalRef" data-key="modal.inspired">Inspired by: —</p>
     <form id="modalForm" onsubmit="handleModalSubmit(event)">
-      <input type="hidden" id="reqRef"   name="inspired_by" />
-      <input type="text"   id="reqName"  name="name"         placeholder="Your Name" required />
-      <input type="email"  id="reqEmail" name="email"        placeholder="Your Email" required />
-      <input type="tel"    id="reqPhone" name="phone"        placeholder="Phone / WhatsApp (optional)" />
+      <input type="hidden" id="reqRef" name="inspired_by" />
+      <input type="text"   id="reqName"  name="name" placeholder="Your Name" data-placeholder-key="form.name" required />
+      <input type="email"  id="reqEmail" name="email" placeholder="Your Email" data-placeholder-key="form.email" required />
+      <input type="tel"    id="reqPhone" name="phone" placeholder="Phone / WhatsApp (optional)" data-placeholder-key="form.phone" />
       <select id="reqType" name="project_type">
-        <option value="" disabled selected>Select Project Type</option>
-        <option>Poster</option>
-        <option>Pamphlet / Brochure</option>
-        <option>Calendar</option>
-        <option>Receipt Book</option>
-        <option>Wedding Stationery</option>
-        <option>Certificate</option>
-        <option>Custom Artwork</option>
-        <option>Brand Identity</option>
-        <option>Other</option>
+        <option value="" disabled selected data-key="form.selectType">Select Project Type</option>
+        <option data-key="filter.posters">Poster</option>
+        <option data-key="filter.pamphlets">Pamphlet / Brochure</option>
+        <option data-key="filter.calendars">Calendar</option>
+        <option data-key="filter.receipts">Receipt Book</option>
+        <option data-key="filter.wedding">Wedding Stationery</option>
+        <option data-key="filter.certificates">Certificate</option>
+        <option data-key="filter.custom">Custom Artwork</option>
+        <option data-key="filter.brand">Brand Identity</option>
+        <option data-key="form.other">Other</option>
       </select>
-      <textarea id="reqNotes" name="notes" placeholder="Any specific text, colours, size requirements…"></textarea>
+      <textarea id="reqNotes" name="notes" placeholder="Any specific text, colours, size requirements…" data-placeholder-key="form.notes"></textarea>
       <input type="text" name="_gotcha" style="display:none" />
-      <button type="submit" class="modal-submit">Send Request →</button>
+      <button type="submit" class="modal-submit" data-key="form.sendRequest">Send Request →</button>
     </form>
     <div id="modal-success">
       <div class="check">✦</div>
-      <p>Your request has been received.<br />Imamuddin will be in touch shortly.</p>
+      <p data-key="modal.success">Your request has been received.<br />Imamuddin will be in touch shortly.</p>
     </div>
   </div>
 </div>
@@ -198,6 +207,7 @@
 <div class="toast" id="toast"></div>
 
 <!-- ── SCRIPTS ── -->
+<script src="js/languages.js"></script>
 <script src="js/portfolio.js"></script>
 
 </body>
