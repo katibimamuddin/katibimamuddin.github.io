@@ -1,5 +1,12 @@
 {
   "category": "Certificates",
   "description": "Formal certificates of completion, appreciation, and achievement with Arabic calligraphy and decorative borders.",
-  "files": []
+  "files": [
+    {
+      "filename": "cert-1.jpeg",
+      "title": "Certificate Design 1",
+      "description": "Formal certificate with Arabic calligraphy header and decorative ornamental border.",
+      "type": "image"
+    }
+  ]
 }

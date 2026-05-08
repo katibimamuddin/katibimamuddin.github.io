@@ -1,5 +1,24 @@
 {
   "category": "Brand Identity",
   "description": "Logo design, letterheads, business cards, and full brand identity packages featuring Arabic calligraphic elements.",
-  "files": []
+  "files": [
+    {
+      "filename": "brand-1.jpeg",
+      "title": "Brand Identity 1",
+      "description": "Full brand identity package with Arabic calligraphic logo and supporting materials.",
+      "type": "image"
+    },
+    {
+      "filename": "brand-2.jpeg",
+      "title": "Brand Identity 2",
+      "description": "Custom logo and letterhead design with Arabic calligraphy elements.",
+      "type": "image"
+    },
+    {
+      "filename": "brand-3.jpeg",
+      "title": "Brand Identity 3",
+      "description": "Business card and brand collateral design with ornamental Arabic script.",
+      "type": "image"
+    }
+  ]
 }
