@@ -3,9 +3,21 @@
   "description": "Posts for the social media handles of my clients.",
   "files": [
     {
-      "filename": "sample-wedding-1.jpg",
+      "filename": "post-1",
+      "title": "Calligraphy Campaign - Design 1",
+      "description": "Elegant Arabic calligraphy design tailored for Instagram and Facebook stories. Perfect for beauty and lifestyle brands.",
+      "type": "image"
+    },
+    {
+      "filename": "post-2",
+      "title": "Calligraphy Campaign - Design 2",
+      "description": "Vibrant social media post featuring intricate Arabic lettering with modern design elements. Ideal for brand awareness.",
+      "type": "image"
+    },
+    {
+      "filename": "post-3.jpg",
       "title": "Nikah Invitation",
-      "description": "Bespoke nikah invitation with Arabic calligraphy header, ornamental borders, and dual-language layout.",
+      "description": "Bespoke nikah invitation design with Arabic calligraphy header, ornamental borders, and dual-language layout.",
       "type": "image"
     }
   ]
