@@ -32,7 +32,7 @@ const CATEGORIES = [
 const SEO_META = {
   'all': {
     title: 'Katib Imamuddin — Arabic Calligraphy & Design',
-    description: 'Katib Imamuddin — specialist in Arabic calligraphy and bespoke graphic design. Posters, pamphlets, calendars, wedding stationery, brand identity, and more. Based in Noida, India.',
+    description: 'Katib Imamuddin — specialist in Arabic calligraphy and bespoke graphic design. Posters, pamphlets, calendars, wedding invites, brand identity, and more. Based in Noida, India.',
     url: 'https://katibimamuddin.github.io/',
   },
   'posters': {
@@ -51,8 +51,8 @@ const SEO_META = {
     url: 'https://katibimamuddin.github.io/#calendars',
   },
   'wedding-stationery': {
-    title: 'Wedding Stationery & Nikah Invitations | Katib Imamuddin',
-    description: 'Bespoke nikah invitations, save-the-dates, and wedding cards with Arabic calligraphy. Custom wedding stationery by Katib Imamuddin.',
+    title: 'Wedding Invites & Nikah Invitations | Katib Imamuddin',
+    description: 'Bespoke nikah invitations, save-the-dates, and wedding cards with Arabic calligraphy. Custom wedding invites by Katib Imamuddin.',
     url: 'https://katibimamuddin.github.io/#wedding-stationery',
   },
   'receipt-books': {
