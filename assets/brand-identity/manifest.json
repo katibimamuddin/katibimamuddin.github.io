@@ -1,24 +1,108 @@
-{
-  "category": "Brand Identity",
-  "description": "Logo design, letterheads, business cards, and full brand identity packages featuring Arabic calligraphic elements.",
-  "files": [
-    {
-      "filename": "brand-1.jpeg",
-      "title": "Brand Identity 1",
-      "description": "Full brand identity package with Arabic calligraphic logo and supporting materials.",
-      "type": "image"
-    },
-    {
-      "filename": "brand-2.jpeg",
-      "title": "Brand Identity 2",
-      "description": "Custom logo and letterhead design with Arabic calligraphy elements.",
-      "type": "image"
-    },
-    {
-      "filename": "brand-3.jpeg",
-      "title": "Brand Identity 3",
-      "description": "Business card and brand collateral design with ornamental Arabic script.",
-      "type": "image"
-    }
-  ]
+﻿{
+    "category":  "Brand Identity",
+    "description":  "Logo design, letterheads, business cards, and full brand identity packages featuring Arabic calligraphic elements.",
+    "files":  [
+                  {
+                      "filename":  "brd-1.jpeg",
+                      "title":  "Brand Identity 1",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-2.jpeg",
+                      "title":  "Brand Identity 2",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-3.jpeg",
+                      "title":  "Brand Identity 3",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-4.webp",
+                      "title":  "Brand Identity 4",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-5.webp",
+                      "title":  "Brand Identity 5",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-6.webp",
+                      "title":  "Brand Identity 6",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-7.webp",
+                      "title":  "Brand Identity 7",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-8.webp",
+                      "title":  "Brand Identity 8",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-9.webp",
+                      "title":  "Brand Identity 9",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-10.webp",
+                      "title":  "Brand Identity 10",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-11.webp",
+                      "title":  "Brand Identity 11",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-12.webp",
+                      "title":  "Brand Identity 12",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-13.webp",
+                      "title":  "Brand Identity 13",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-14.webp",
+                      "title":  "Brand Identity 14",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-15.webp",
+                      "title":  "Brand Identity 15",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-16.webp",
+                      "title":  "Brand Identity 16",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "brd-17.webp",
+                      "title":  "Brand Identity 17",
+                      "description":  "Brand identity design featuring Arabic calligraphy elements.",
+                      "type":  "image"
+                  }
+              ]
 }

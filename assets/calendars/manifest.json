@@ -1,18 +1,48 @@
-{
-  "category": "Calendars",
-  "description": "Wall and desk calendars featuring a different calligraphic composition for each month, with dual Hijri/Gregorian dates.",
-  "files": [
-    {
-      "filename": "cal-1.jpg",
-      "title": "Calendars Sample",
-      "description": "Some of the previous calendars for my clients.",
-      "type": "image"
-    },
-    {
-      "filename": "cal-2.jpeg",
-      "title": "Hijri Calendar 1446",
-      "description": "Wall calendar with a unique calligraphic composition for each month. Dual Hijri/Gregorian dates.",
-      "type": "image"
-    }
-  ]
+﻿{
+    "category":  "Calendars",
+    "description":  "Wall and desk calendars featuring a different calligraphic composition for each month, with dual Hijri/Gregorian dates.",
+    "files":  [
+                  {
+                      "filename":  "cal-1.jpg",
+                      "title":  "Calendar Design 1",
+                      "description":  "Calendar design with Arabic calligraphy and Hijri/Gregorian dates.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "cal-2.jpeg",
+                      "title":  "Calendar Design 2",
+                      "description":  "Calendar design with Arabic calligraphy and Hijri/Gregorian dates.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "cal-3.webp",
+                      "title":  "Calendar Design 3",
+                      "description":  "Calendar design with Arabic calligraphy and Hijri/Gregorian dates.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "cal-4.webp",
+                      "title":  "Calendar Design 4",
+                      "description":  "Calendar design with Arabic calligraphy and Hijri/Gregorian dates.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "cal-5.webp",
+                      "title":  "Calendar Design 5",
+                      "description":  "Calendar design with Arabic calligraphy and Hijri/Gregorian dates.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "cal-6.webp",
+                      "title":  "Calendar Design 6",
+                      "description":  "Calendar design with Arabic calligraphy and Hijri/Gregorian dates.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "cal-7.webp",
+                      "title":  "Calendar Design 7",
+                      "description":  "Calendar design with Arabic calligraphy and Hijri/Gregorian dates.",
+                      "type":  "image"
+                  }
+              ]
 }

@@ -1,18 +1,96 @@
-{
-  "category": "Banners",
-  "description": "Printed and digital banners featuring Arabic calligraphy and bespoke graphic design.",
-  "files": [
-    {
-      "filename": "banner-1.jpeg",
-      "title": "Banner Design 1",
-      "description": "Custom banner design with Arabic calligraphy for print and display.",
-      "type": "image"
-    },
-    {
-      "filename": "banner-2.jpeg",
-      "title": "Banner Design 2",
-      "description": "Bespoke banner featuring ornamental Arabic lettering and bold layout.",
-      "type": "image"
-    }
-  ]
+﻿{
+    "category":  "Banners",
+    "description":  "Printed and digital banners featuring Arabic calligraphy and bespoke graphic design.",
+    "files":  [
+                  {
+                      "filename":  "bnr-1.webp",
+                      "title":  "Banner Design 1",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-2.webp",
+                      "title":  "Banner Design 2",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-3.webp",
+                      "title":  "Banner Design 3",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-4.webp",
+                      "title":  "Banner Design 4",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-5.webp",
+                      "title":  "Banner Design 5",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-6.webp",
+                      "title":  "Banner Design 6",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-7.webp",
+                      "title":  "Banner Design 7",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-8.webp",
+                      "title":  "Banner Design 8",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-9.webp",
+                      "title":  "Banner Design 9",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-10.webp",
+                      "title":  "Banner Design 10",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-11.webp",
+                      "title":  "Banner Design 11",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-12.webp",
+                      "title":  "Banner Design 12",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-13.jpeg",
+                      "title":  "Banner Design 13",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-14.jpeg",
+                      "title":  "Banner Design 14",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "bnr-15.webp",
+                      "title":  "Banner Design 15",
+                      "description":  "Custom banner design with Arabic calligraphy for print and display.",
+                      "type":  "image"
+                  }
+              ]
 }

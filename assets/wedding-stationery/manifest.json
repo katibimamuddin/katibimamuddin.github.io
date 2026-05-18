@@ -1,12 +1,132 @@
-{
-  "category": "Wedding Stationery",
-  "description": "Bespoke nikah invitations, save-the-dates, menus, and thank-you cards with Arabic calligraphy headers and ornamental borders.",
-  "files": [
-    {
-      "filename": "invite-1.jpeg",
-      "title": "Nikah Invitation",
-      "description": "Bespoke nikah invitation with Arabic calligraphy header, ornamental borders, and dual-language layout.",
-      "type": "image"
-    }
-  ]
+﻿{
+    "category":  "Wedding Stationery",
+    "description":  "Bespoke nikah invitations, save-the-dates, menus, and thank-you cards with Arabic calligraphy headers and ornamental borders.",
+    "files":  [
+                  {
+                      "filename":  "wed-1.webp",
+                      "title":  "Wedding Stationery 1",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-2.webp",
+                      "title":  "Wedding Stationery 2",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-3.webp",
+                      "title":  "Wedding Stationery 3",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-4.webp",
+                      "title":  "Wedding Stationery 4",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-5.webp",
+                      "title":  "Wedding Stationery 5",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-6.jpeg",
+                      "title":  "Wedding Stationery 6",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-7.webp",
+                      "title":  "Wedding Stationery 7",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-8.webp",
+                      "title":  "Wedding Stationery 8",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-9.webp",
+                      "title":  "Wedding Stationery 9",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-10.webp",
+                      "title":  "Wedding Stationery 10",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-11.webp",
+                      "title":  "Wedding Stationery 11",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-12.webp",
+                      "title":  "Wedding Stationery 12",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-13.webp",
+                      "title":  "Wedding Stationery 13",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-14.webp",
+                      "title":  "Wedding Stationery 14",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-15.webp",
+                      "title":  "Wedding Stationery 15",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-16.webp",
+                      "title":  "Wedding Stationery 16",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-17.webp",
+                      "title":  "Wedding Stationery 17",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-18.webp",
+                      "title":  "Wedding Stationery 18",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-19.webp",
+                      "title":  "Wedding Stationery 19",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-20.webp",
+                      "title":  "Wedding Stationery 20",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "wed-21.webp",
+                      "title":  "Wedding Stationery 21",
+                      "description":  "Bespoke wedding stationery with Arabic calligraphy.",
+                      "type":  "image"
+                  }
+              ]
 }

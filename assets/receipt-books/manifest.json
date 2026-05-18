@@ -1,12 +1,60 @@
-{
-  "category": "Receipt Books",
-  "description": "Professionally designed receipt books with custom Arabic business name, ornamental border motifs, and elegant typography.",
-  "files": [
-    {
-      "filename": "receipt-1.jpeg",
-      "title": "Business Receipt Book",
-      "description": "Custom receipt book with Arabic business name, border motifs, and sequential numbering.",
-      "type": "image"
-    }
-  ]
+﻿{
+    "category":  "Receipt Books",
+    "description":  "Professionally designed receipt books with custom Arabic business name, ornamental border motifs, and elegant typography.",
+    "files":  [
+                  {
+                      "filename":  "rcpt-1.jpeg",
+                      "title":  "Receipt Book Design 1",
+                      "description":  "Custom receipt book with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "rcpt-2.jpg",
+                      "title":  "Receipt Book Design 2",
+                      "description":  "Custom receipt book with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "rcpt-3.jpeg",
+                      "title":  "Receipt Book Design 3",
+                      "description":  "Custom receipt book with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "rcpt-4.png",
+                      "title":  "Receipt Book Design 4",
+                      "description":  "Custom receipt book with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "rcpt-5.jpg",
+                      "title":  "Receipt Book Design 5",
+                      "description":  "Custom receipt book with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "rcpt-6.jpg",
+                      "title":  "Receipt Book Design 6",
+                      "description":  "Custom receipt book with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "rcpt-7.jpg",
+                      "title":  "Receipt Book Design 7",
+                      "description":  "Custom receipt book with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "rcpt-8.jpg",
+                      "title":  "Receipt Book Design 8",
+                      "description":  "Custom receipt book with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "rcpt-9.jpeg",
+                      "title":  "Receipt Book Design 9",
+                      "description":  "Custom receipt book with Arabic calligraphy.",
+                      "type":  "image"
+                  }
+              ]
 }

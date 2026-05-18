@@ -1,18 +1,30 @@
-{
-  "category": "Custom Artwork",
-  "description": "One-of-a-kind calligraphic compositions created for individuals, homes, and gifts — names, verses, and personal commissions.",
-  "files": [
-    {
-      "filename": "art-1.jpeg",
-      "title": "Custom Artwork 1",
-      "description": "Bespoke calligraphic composition crafted as a personal commission.",
-      "type": "image"
-    },
-    {
-      "filename": "art-2.jpeg",
-      "title": "Custom Artwork 2",
-      "description": "One-of-a-kind Arabic calligraphy piece for home or gifting.",
-      "type": "image"
-    }
-  ]
+﻿{
+    "category":  "Custom Artwork",
+    "description":  "One-of-a-kind calligraphic compositions created for individuals, homes, and gifts â€” names, verses, and personal commissions.",
+    "files":  [
+                  {
+                      "filename":  "art-1.jpeg",
+                      "title":  "Custom Artwork 1",
+                      "description":  "Bespoke Arabic calligraphy composition.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "art-2.jpeg",
+                      "title":  "Custom Artwork 2",
+                      "description":  "Bespoke Arabic calligraphy composition.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "art-3.webp",
+                      "title":  "Custom Artwork 3",
+                      "description":  "Bespoke Arabic calligraphy composition.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "art-4.webp",
+                      "title":  "Custom Artwork 4",
+                      "description":  "Bespoke Arabic calligraphy composition.",
+                      "type":  "image"
+                  }
+              ]
 }

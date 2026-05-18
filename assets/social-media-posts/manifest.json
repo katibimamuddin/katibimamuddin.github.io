@@ -1,24 +1,132 @@
-{
-  "category": "Social Media Posts",
-  "description": "Posts for the social media handles of my clients.",
-  "files": [
-    {
-      "filename": "post-1.jpg",
-      "title": "Calligraphy Campaign - Design 1",
-      "description": "Elegant Arabic calligraphy design tailored for Instagram and Facebook stories. Perfect for beauty and lifestyle brands.",
-      "type": "image"
-    },
-    {
-      "filename": "post-2.jpg",
-      "title": "Calligraphy Campaign - Design 2",
-      "description": "Vibrant social media post featuring intricate Arabic lettering with modern design elements. Ideal for brand awareness.",
-      "type": "image"
-    },
-    {
-      "filename": "post-3.jpg",
-      "title": "Nikah Invitation",
-      "description": "Bespoke nikah invitation design with Arabic calligraphy header, ornamental borders, and dual-language layout.",
-      "type": "image"
-    }
-  ]
+﻿{
+    "category":  "Social Media Posts",
+    "description":  "Posts for the social media handles of my clients.",
+    "files":  [
+                  {
+                      "filename":  "smp-1.jpg",
+                      "title":  "Social Media Post 1",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-2.jpg",
+                      "title":  "Social Media Post 2",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-3.jpg",
+                      "title":  "Social Media Post 3",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-4.webp",
+                      "title":  "Social Media Post 4",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-5.webp",
+                      "title":  "Social Media Post 5",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-6.webp",
+                      "title":  "Social Media Post 6",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-7.webp",
+                      "title":  "Social Media Post 7",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-8.webp",
+                      "title":  "Social Media Post 8",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-9.webp",
+                      "title":  "Social Media Post 9",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-10.webp",
+                      "title":  "Social Media Post 10",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-11.webp",
+                      "title":  "Social Media Post 11",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-12.webp",
+                      "title":  "Social Media Post 12",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-13.webp",
+                      "title":  "Social Media Post 13",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-14.webp",
+                      "title":  "Social Media Post 14",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-15.webp",
+                      "title":  "Social Media Post 15",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-16.webp",
+                      "title":  "Social Media Post 16",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-17.webp",
+                      "title":  "Social Media Post 17",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-18.webp",
+                      "title":  "Social Media Post 18",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-19.webp",
+                      "title":  "Social Media Post 19",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-20.webp",
+                      "title":  "Social Media Post 20",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "smp-21.webp",
+                      "title":  "Social Media Post 21",
+                      "description":  "Social media post design with Arabic calligraphy.",
+                      "type":  "image"
+                  }
+              ]
 }

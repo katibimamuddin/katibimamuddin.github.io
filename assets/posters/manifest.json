@@ -1,18 +1,96 @@
-{
-  "category": "Posters",
-  "description": "Statement posters featuring classical Arabic calligraphy scripts including Thuluth, Naskh, and Kufic.",
-  "files": [
-    {
-      "filename": "poster-1.jpeg",
-      "title": "Poster Design 1",
-      "description": "Statement poster featuring classical Arabic calligraphy. Available in A2/A3.",
-      "type": "image"
-    },
-    {
-      "filename": "poster-2.jpeg",
-      "title": "Poster Design 2",
-      "description": "Arabic calligraphy poster with decorative border. A statement piece for homes and offices.",
-      "type": "image"
-    }
-  ]
+﻿{
+    "category":  "Posters",
+    "description":  "Statement posters featuring classical Arabic calligraphy scripts including Thuluth, Naskh, and Kufic.",
+    "files":  [
+                  {
+                      "filename":  "post-1.webp",
+                      "title":  "Poster Design 1",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-2.webp",
+                      "title":  "Poster Design 2",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-3.webp",
+                      "title":  "Poster Design 3",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-4.webp",
+                      "title":  "Poster Design 4",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-5.webp",
+                      "title":  "Poster Design 5",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-6.webp",
+                      "title":  "Poster Design 6",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-7.webp",
+                      "title":  "Poster Design 7",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-8.webp",
+                      "title":  "Poster Design 8",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-9.webp",
+                      "title":  "Poster Design 9",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-10.webp",
+                      "title":  "Poster Design 10",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-11.webp",
+                      "title":  "Poster Design 11",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-12.webp",
+                      "title":  "Poster Design 12",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-13.jpeg",
+                      "title":  "Poster Design 13",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-14.jpeg",
+                      "title":  "Poster Design 14",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  },
+                  {
+                      "filename":  "post-15.webp",
+                      "title":  "Poster Design 15",
+                      "description":  "Arabic calligraphy poster design.",
+                      "type":  "image"
+                  }
+              ]
 }
