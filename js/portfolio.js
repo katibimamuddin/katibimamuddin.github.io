@@ -30,22 +30,22 @@ const CATEGORIES = [
 
 // ── SEO META PER CATEGORY ──
 const SEO_META = {
-  all: {
+  'all': {
     title: 'Katib Imamuddin — Arabic Calligraphy & Design',
     description: 'Katib Imamuddin — specialist in Arabic calligraphy and bespoke graphic design. Posters, pamphlets, calendars, wedding stationery, brand identity, and more. Based in Noida, India.',
     url: 'https://katibimamuddin.github.io/',
   },
-  posters: {
+  'posters': {
     title: 'Arabic Calligraphy Posters | Katib Imamuddin',
     description: 'Statement posters featuring classical Arabic calligraphy — Thuluth, Naskh, and Kufic scripts. Custom poster design by Katib Imamuddin, Noida.',
     url: 'https://katibimamuddin.github.io/#posters',
   },
-  pamphlets: {
+  'pamphlets': {
     title: 'Pamphlets & Brochures | Katib Imamuddin',
     description: 'Tri-fold and bi-fold pamphlets and brochures with Arabic calligraphic design. Custom print collateral by Katib Imamuddin, Noida.',
     url: 'https://katibimamuddin.github.io/#pamphlets',
   },
-  calendars: {
+  'calendars': {
     title: 'Arabic Calligraphy Calendars | Katib Imamuddin',
     description: 'Wall and desk calendars with Arabic calligraphy and dual Hijri/Gregorian dates. Custom calendar design by Katib Imamuddin, Noida.',
     url: 'https://katibimamuddin.github.io/#calendars',
@@ -60,7 +60,7 @@ const SEO_META = {
     description: 'Professionally designed receipt books with custom Arabic business name and ornamental borders. By Katib Imamuddin, Noida.',
     url: 'https://katibimamuddin.github.io/#receipt-books',
   },
-  certificates: {
+  'certificates': {
     title: 'Arabic Calligraphy Certificates | Katib Imamuddin',
     description: 'Formal certificates of completion and appreciation with Arabic calligraphy and decorative borders. By Katib Imamuddin.',
     url: 'https://katibimamuddin.github.io/#certificates',
@@ -80,7 +80,7 @@ const SEO_META = {
     description: 'Custom social media post designs with Arabic calligraphy for Instagram, Facebook, and more. By Katib Imamuddin, Noida.',
     url: 'https://katibimamuddin.github.io/#social-media-posts',
   },
-  banner: {
+  'banner': {
     title: 'Banners & Signage | Katib Imamuddin',
     description: 'Printed and digital banners featuring Arabic calligraphy and bespoke graphic design. Custom banner design by Katib Imamuddin.',
     url: 'https://katibimamuddin.github.io/#banner',
