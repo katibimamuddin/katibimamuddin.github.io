@@ -28,6 +28,88 @@ const CATEGORIES = [
   { folder: 'banner',            label: 'filter.banner',            filter: 'banner' },
 ];
 
+// ── SEO META PER CATEGORY ──
+const SEO_META = {
+  all: {
+    title: 'Katib Imamuddin — Arabic Calligraphy & Design',
+    description: 'Katib Imamuddin — specialist in Arabic calligraphy and bespoke graphic design. Posters, pamphlets, calendars, wedding stationery, brand identity, and more. Based in Noida, India.',
+    url: 'https://katibimamuddin.github.io/',
+  },
+  posters: {
+    title: 'Arabic Calligraphy Posters | Katib Imamuddin',
+    description: 'Statement posters featuring classical Arabic calligraphy — Thuluth, Naskh, and Kufic scripts. Custom poster design by Katib Imamuddin, Noida.',
+    url: 'https://katibimamuddin.github.io/#posters',
+  },
+  pamphlets: {
+    title: 'Pamphlets & Brochures | Katib Imamuddin',
+    description: 'Tri-fold and bi-fold pamphlets and brochures with Arabic calligraphic design. Custom print collateral by Katib Imamuddin, Noida.',
+    url: 'https://katibimamuddin.github.io/#pamphlets',
+  },
+  calendars: {
+    title: 'Arabic Calligraphy Calendars | Katib Imamuddin',
+    description: 'Wall and desk calendars with Arabic calligraphy and dual Hijri/Gregorian dates. Custom calendar design by Katib Imamuddin, Noida.',
+    url: 'https://katibimamuddin.github.io/#calendars',
+  },
+  'wedding-stationery': {
+    title: 'Wedding Stationery & Nikah Invitations | Katib Imamuddin',
+    description: 'Bespoke nikah invitations, save-the-dates, and wedding cards with Arabic calligraphy. Custom wedding stationery by Katib Imamuddin.',
+    url: 'https://katibimamuddin.github.io/#wedding-stationery',
+  },
+  'receipt-books': {
+    title: 'Custom Receipt Books | Katib Imamuddin',
+    description: 'Professionally designed receipt books with custom Arabic business name and ornamental borders. By Katib Imamuddin, Noida.',
+    url: 'https://katibimamuddin.github.io/#receipt-books',
+  },
+  certificates: {
+    title: 'Arabic Calligraphy Certificates | Katib Imamuddin',
+    description: 'Formal certificates of completion and appreciation with Arabic calligraphy and decorative borders. By Katib Imamuddin.',
+    url: 'https://katibimamuddin.github.io/#certificates',
+  },
+  'custom-artwork': {
+    title: 'Custom Arabic Calligraphy Artwork | Katib Imamuddin',
+    description: 'One-of-a-kind calligraphic compositions — names, Quranic verses, and personal commissions. Bespoke artwork by Katib Imamuddin.',
+    url: 'https://katibimamuddin.github.io/#custom-artwork',
+  },
+  'brand-identity': {
+    title: 'Brand Identity Design | Katib Imamuddin',
+    description: 'Logo design, letterheads, business cards, and full brand identity packages featuring Arabic calligraphic elements. By Katib Imamuddin, Noida.',
+    url: 'https://katibimamuddin.github.io/#brand-identity',
+  },
+  'social-media-posts': {
+    title: 'Social Media Design | Katib Imamuddin',
+    description: 'Custom social media post designs with Arabic calligraphy for Instagram, Facebook, and more. By Katib Imamuddin, Noida.',
+    url: 'https://katibimamuddin.github.io/#social-media-posts',
+  },
+  banner: {
+    title: 'Banners & Signage | Katib Imamuddin',
+    description: 'Printed and digital banners featuring Arabic calligraphy and bespoke graphic design. Custom banner design by Katib Imamuddin.',
+    url: 'https://katibimamuddin.github.io/#banner',
+  },
+};
+
+function updateMeta(filter) {
+  const meta = SEO_META[filter] || SEO_META.all;
+
+  document.title = meta.title;
+
+  const sel = (attr, val) => { const el = document.querySelector(attr); if (el) el.setAttribute('content', val); };
+  sel('meta[name="description"]',         meta.description);
+  sel('meta[property="og:title"]',        meta.title);
+  sel('meta[property="og:description"]',  meta.description);
+  sel('meta[property="og:url"]',          meta.url);
+  sel('meta[name="twitter:title"]',       meta.title);
+  sel('meta[name="twitter:description"]', meta.description);
+
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute('href', meta.url);
+
+  if (filter === 'all') {
+    history.replaceState(null, '', window.location.pathname);
+  } else {
+    history.replaceState(null, '', `#${filter}`);
+  }
+}
+
 // ── STATE ──
 let allItems = [];       // flat array of all portfolio items across categories
 let activeFilter = 'all';
@@ -35,10 +117,13 @@ let activeFilter = 'all';
 // ── BOOT ──
 document.addEventListener('DOMContentLoaded', () => {
   loadAllManifests();
-  bindFilterButtons();
   bindModal();
   bindContactForm();
   bindModalForm();
+  window.addEventListener('hashchange', () => {
+    const filter = window.location.hash.slice(1) || 'all';
+    applyFilter(filter);
+  });
 });
 
 // ── LOAD ALL MANIFESTS ──
@@ -76,7 +161,8 @@ async function loadAllManifests() {
   });
 
   buildFilterButtons();
-  renderPortfolio('all');
+  const initialFilter = window.location.hash.slice(1) || 'all';
+  applyFilter(initialFilter);
 }
 
 // ── FETCH A SINGLE MANIFEST ──
@@ -119,9 +205,20 @@ function buildFilterButtons() {
   bindFilterButtons();
 }
 
+// ── APPLY FILTER (sets active button + renders + updates meta) ──
+function applyFilter(filter) {
+  const valid = filter === 'all' || allItems.some(i => i.filter === filter);
+  const target = valid ? filter : 'all';
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.filter === target);
+  });
+  renderPortfolio(target);
+}
+
 // ── RENDER PORTFOLIO GRID ──
 function renderPortfolio(filter) {
   activeFilter = filter;
+  updateMeta(filter);
   const grid = document.getElementById('portfolioGrid');
   const items = filter === 'all' ? allItems : allItems.filter(i => i.filter === filter);
 
@@ -186,9 +283,7 @@ function buildItemHTML(item) {
 function bindFilterButtons() {
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', function () {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      renderPortfolio(this.dataset.filter);
+      applyFilter(this.dataset.filter);
     });
   });
 }
