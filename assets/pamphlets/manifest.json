@@ -1,66 +1,16 @@
-﻿{
-    “category”:  “Pamphlets & Brochures”,
-    “description”:  “Tri-fold and bi-fold pamphlets, brochures, and informational booklets with Arabic calligraphic design.”,
-    "files":  [
-                  {
-                      "filename":  "pamp-1.webp",
-                      "title":  "Pamphlet Design 1",
-                      "description":  "Pamphlet and brochure design with Arabic calligraphy.",
-                      "type":  "image"
-                  },
-                  {
-                      "filename":  "pamp-2.webp",
-                      "title":  "Pamphlet Design 2",
-                      "description":  "Pamphlet and brochure design with Arabic calligraphy.",
-                      "type":  "image"
-                  },
-                  {
-                      "filename":  "pamp-3.webp",
-                      "title":  "Pamphlet Design 3",
-                      "description":  "Pamphlet and brochure design with Arabic calligraphy.",
-                      "type":  "image"
-                  },
-                  {
-                      "filename":  "pamp-4.webp",
-                      "title":  "Pamphlet Design 4",
-                      "description":  "Pamphlet and brochure design with Arabic calligraphy.",
-                      "type":  "image"
-                  },
-                  {
-                      "filename":  "pamp-5.webp",
-                      "title":  "Pamphlet Design 5",
-                      "description":  "Pamphlet and brochure design with Arabic calligraphy.",
-                      "type":  "image"
-                  },
-                  {
-                      "filename":  "pamp-6.webp",
-                      "title":  "Pamphlet Design 6",
-                      "description":  "Pamphlet and brochure design with Arabic calligraphy.",
-                      "type":  "image"
-                  },
-                  {
-                      "filename":  "pamp-7.webp",
-                      "title":  "Pamphlet Design 7",
-                      "description":  "Pamphlet and brochure design with Arabic calligraphy.",
-                      "type":  "image"
-                  },
-                  {
-                      "filename":  "pamp-8.jpeg",
-                      "title":  "Pamphlet Design 8",
-                      "description":  "Pamphlet and brochure design with Arabic calligraphy.",
-                      "type":  "image"
-                  },
-                  {
-                      "filename":  "pamp-9.jpeg",
-                      "title":  "Pamphlet Design 9",
-                      "description":  "Pamphlet and brochure design with Arabic calligraphy.",
-                      "type":  "image"
-                  },
-                  {
-                      "filename":  "pamp-10.webp",
-                      "title":  "Pamphlet Design 10",
-                      "description":  "Pamphlet and brochure design with Arabic calligraphy.",
-                      "type":  "image"
-                  }
-              ]
+{
+  "category": "Pamphlets & Brochures",
+  "description": "Tri-fold and bi-fold pamphlets, brochures, and informational booklets with Arabic calligraphic design.",
+  "files": [
+    { "filename": "pamp-1.webp",  "title": "Pamphlet Design 1",  "description": "Pamphlet and brochure design with Arabic calligraphy.", "type": "image" },
+    { "filename": "pamp-2.webp",  "title": "Pamphlet Design 2",  "description": "Pamphlet and brochure design with Arabic calligraphy.", "type": "image" },
+    { "filename": "pamp-3.webp",  "title": "Pamphlet Design 3",  "description": "Pamphlet and brochure design with Arabic calligraphy.", "type": "image" },
+    { "filename": "pamp-4.webp",  "title": "Pamphlet Design 4",  "description": "Pamphlet and brochure design with Arabic calligraphy.", "type": "image" },
+    { "filename": "pamp-5.webp",  "title": "Pamphlet Design 5",  "description": "Pamphlet and brochure design with Arabic calligraphy.", "type": "image" },
+    { "filename": "pamp-6.webp",  "title": "Pamphlet Design 6",  "description": "Pamphlet and brochure design with Arabic calligraphy.", "type": "image" },
+    { "filename": "pamp-7.webp",  "title": "Pamphlet Design 7",  "description": "Pamphlet and brochure design with Arabic calligraphy.", "type": "image" },
+    { "filename": "pamp-8.jpeg",  "title": "Pamphlet Design 8",  "description": "Pamphlet and brochure design with Arabic calligraphy.", "type": "image" },
+    { "filename": "pamp-9.jpeg",  "title": "Pamphlet Design 9",  "description": "Pamphlet and brochure design with Arabic calligraphy.", "type": "image" },
+    { "filename": "pamp-10.webp", "title": "Pamphlet Design 10", "description": "Pamphlet and brochure design with Arabic calligraphy.", "type": "image" }
+  ]
 }
