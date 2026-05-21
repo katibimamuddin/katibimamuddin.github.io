@@ -602,7 +602,7 @@ section { position: relative; z-index: 1; }
   justify-content: center;
   cursor: zoom-out;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s ease;
 }
 #lightbox.open { display: flex; }
 #lightbox-img {

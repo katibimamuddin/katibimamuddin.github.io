@@ -310,19 +310,26 @@ function openLightbox(src, alt) {
   lb.classList.add('open');
   document.body.style.overflow = 'hidden';
   requestAnimationFrame(() => requestAnimationFrame(() => {
-    lb.style.opacity = '1';           // backdrop fades in over 0.2s
+    lb.style.opacity = '1';           // backdrop fades in over 0.3s
     setTimeout(() => {
       img.style.opacity = '1';        // then image fades in over 0.5s
-    }, 200);
+    }, 300);
   }));
 }
 
 function closeLightbox() {
-  const lb = document.getElementById('lightbox');
-  lb.classList.remove('open');
+  const lb  = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.style.transition = 'opacity 0.4s ease';
+  lb.style.transition = 'opacity 0.4s ease';
+  img.style.opacity = '0';
   lb.style.opacity = '0';
-  document.getElementById('lightbox-img').style.opacity = '0';
-  document.body.style.overflow = '';
+  setTimeout(() => {
+    lb.classList.remove('open');
+    lb.style.transition = '';
+    img.style.transition = '';
+    document.body.style.overflow = '';
+  }, 420);
 }
 
 // ── MODAL ──
