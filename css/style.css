@@ -735,92 +735,71 @@ footer p { color: rgba(255,255,255,0.4); font-size: 0.8rem; font-style: italic; 
   .portfolio-grid { grid-template-columns: 1fr; }
 }
 
-/* ── INTRO CALLIGRAPHY OVERLAY ── */
+/* ── Loading overlay ── */
 #intro-overlay {
   position: fixed;
   inset: 0;
   z-index: 9999;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, #0d1b2e 0%, #1a3a6e 55%, #2a6fc9 100%);
-  cursor: pointer;
-  transition: opacity 0.8s ease;
-}
-
-#intro-overlay.intro-out {
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
 }
 
 .intro-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.8rem;
-  opacity: 0;
-  animation: intro-appear 0.3s ease 0.1s forwards;
-}
-
-@keyframes intro-appear {
-  to { opacity: 1; }
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem;
 }
 
 .intro-sig {
-  width: min(78vw, 500px);
-  max-height: 32vh;
+  width: min(90vw, 600px);
+  height: auto;
+  aspect-ratio: 4000 / 2399;
 }
-
-.sig-stroke {
-  fill: none;
-  stroke: #a8cff5;
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.sig-dot {
-  fill: #a8cff5;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.sig-dot.sig-dot-visible { opacity: 1; }
 
 .intro-name {
   font-family: 'Noto Naskh Arabic', serif;
   font-size: clamp(1.4rem, 4vw, 2.2rem);
-  color: #a8cff5;
-  direction: rtl;
+  color: #1a1a2e;
+  margin: 0;
   opacity: 0;
-  transition: opacity 0.7s ease;
+  animation: fadeInText 0.6s ease forwards;
+  animation-delay: 6.4s;   /* just after strokes finish */
 }
 
 .intro-sub {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(0.6rem, 1.8vw, 0.8rem);
-  letter-spacing: 0.22em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  letter-spacing: 0.15em;
+  color: #888;
   text-transform: uppercase;
-  color: rgba(168, 207, 245, 0.45);
+  margin: 0;
   opacity: 0;
-  transition: opacity 0.7s ease 0.15s;
+  animation: fadeInText 0.6s ease forwards;
+  animation-delay: 6.5s;
 }
-
-.intro-name.intro-visible,
-.intro-sub.intro-visible { opacity: 1; }
 
 .intro-skip {
   position: absolute;
   bottom: 2rem;
   right: 2rem;
-  font-family: 'Cinzel', serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.18em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: #aaa;
+  cursor: pointer;
   text-transform: uppercase;
-  color: rgba(168, 207, 245, 0.3);
-  opacity: 0;
-  transition: opacity 0.4s ease, color 0.2s;
-  animation: intro-appear 0.4s ease 1.5s forwards;
 }
 
-.intro-skip:hover { color: rgba(168, 207, 245, 0.7); }
+.intro-skip:hover {
+  color: #555;
+}
+
+@keyframes fadeInText {
+  to { opacity: 1; }
+}

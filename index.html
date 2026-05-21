@@ -22,32 +22,20 @@
 </head>
 <body>
 
-<!-- ── INTRO CALLIGRAPHY OVERLAY ── -->
-<!-- REPLACE the placeholder <path> elements below with your traced calligraphy paths. -->
-<!-- Each stroke → one <path class="sig-stroke">. Paths must follow pen direction (right → left). -->
-<!-- Dots / diacritics → <circle class="sig-dot">. Adjust STROKE_TIMING in js/intro.js to match. -->
+<!-- ── INTRO / LOADING OVERLAY ── -->
+<!-- Drop loading.svg into your assets/ folder and link it below -->
 <div id="intro-overlay" aria-hidden="true">
   <div class="intro-inner">
-    <svg class="intro-sig" viewBox="0 0 600 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- stroke 1: main baseline, flows right → left -->
-      <path class="sig-stroke" d="M 562,105 C 522,85 483,74 443,84 C 403,94 372,76 329,72 C 286,68 255,81 216,79 C 177,77 145,90 106,86 C 67,82 38,97 20,120"/>
-      <!-- stroke 2: ascending loop (ك kaf) -->
-      <path class="sig-stroke" d="M 443,84 C 438,62 436,38 443,20 C 449,5 464,2 473,13 C 479,23 475,39 463,45 C 456,49 448,45 443,38"/>
-      <!-- stroke 3: cup / bowl (ب ba) -->
-      <path class="sig-stroke" d="M 329,72 C 320,92 311,108 300,109 C 289,110 281,98 286,87 C 291,76 308,72 329,72"/>
-      <!-- stroke 4: descending tail flourish -->
-      <path class="sig-stroke" d="M 20,120 C 10,142 14,163 31,168 C 48,173 62,160 56,143 C 52,132 40,129 32,136"/>
-      <!-- dots -->
-      <circle class="sig-dot" cx="300" cy="124" r="4"/>
-      <circle class="sig-dot" cx="320" cy="57"  r="3.5"/>
-      <circle class="sig-dot" cx="340" cy="57"  r="3.5"/>
-      <circle class="sig-dot" cx="78"  cy="100" r="3.5"/>
-      <circle class="sig-dot" cx="94"  cy="100" r="3.5"/>
-    </svg>
+    <object
+      class="intro-sig"
+      type="image/svg+xml"
+      data="assets/loading.svg"
+      aria-label="Katib Imamuddin calligraphy animation">
+    </object>
     <p class="intro-name">كاتب امام الدین</p>
     <p class="intro-sub">Arabic Calligraphy &amp; Design</p>
   </div>
-  <span class="intro-skip">Click to skip</span>
+  <span class="intro-skip">Click anywhere to skip</span>
 </div>
 
 <!-- ── LANGUAGE SWITCHER ── -->
