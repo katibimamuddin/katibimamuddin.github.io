@@ -1,43 +1,48 @@
 // ── intro.js ──────────────────────────────────────────────────────────────
 // Controls the loading screen overlay.
-// The SVG animation plays once (6.71s):
-//   0–6.38s  strokes draw right→left
-//   6.38s    fill snaps to black
-//   6.55s    hold (fully drawn + filled)
-//   6.71s    SVG clears itself
-// Then this script fades the overlay out and reveals the site.
+// The SVG animation plays once (8.71s), strokes draw then hold.
+// After the last stroke (~7.47s) + a brief hold, loading_done.svg fades in.
+// Text appears after the done state has fully faded in.
 // ─────────────────────────────────────────────────────────────────────────
 
 (function () {
-  const SVG_DURATION   = 6710;   // ms — must match dur in loading.svg
-  const FADE_DELAY     = 200;    // ms after SVG ends before fade starts
+  const SVG_DURATION   = 10210;  // ms — must match dur in loading.svg
+  const FADE_DELAY     = 200;    // ms after SVG ends before overlay fades
   const FADE_DURATION  = 800;    // ms for overlay to fade out
+  const DONE_DELAY     = 7800;   // ms — brief hold after last stroke (~7.47s)
+  const DONE_FADE_MS   = 600;    // ms — must match .intro-done CSS transition
 
   const overlay = document.getElementById('intro-overlay');
   if (!overlay) return;
 
-  // Prevent scrolling while overlay is visible
   document.body.style.overflow = 'hidden';
 
-  // Skip button
   const skipBtn = overlay.querySelector('.intro-skip');
-  if (skipBtn) {
-    skipBtn.addEventListener('click', dismiss);
-  }
-
-  // Also allow click anywhere on overlay to skip
+  if (skipBtn) skipBtn.addEventListener('click', dismiss);
   overlay.addEventListener('click', dismiss);
 
-  // Auto-dismiss after animation completes
   const autoTimer = setTimeout(dismiss, SVG_DURATION + FADE_DELAY);
+
+  const doneTimer = setTimeout(function () {
+    const doneEl = overlay.querySelector('.intro-done');
+    if (doneEl) doneEl.classList.add('visible');
+  }, DONE_DELAY);
+
+  const textTimer = setTimeout(function () {
+    const nameEl = overlay.querySelector('.intro-name');
+    const subEl  = overlay.querySelector('.intro-sub');
+    if (nameEl) nameEl.classList.add('intro-text-show');
+    if (subEl)  subEl.classList.add('intro-text-show');
+  }, DONE_DELAY + DONE_FADE_MS);
 
   let dismissed = false;
   function dismiss() {
     if (dismissed) return;
     dismissed = true;
     clearTimeout(autoTimer);
+    clearTimeout(doneTimer);
+    clearTimeout(textTimer);
 
-    // Fade the overlay out
     overlay.style.transition = `opacity ${FADE_DURATION}ms ease`;
     overlay.style.opacity = '0';
 

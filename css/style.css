@@ -738,9 +738,12 @@ footer p { color: rgba(255,255,255,0.4); font-size: 0.8rem; font-style: italic; 
 /* ── Loading overlay ── */
 #intro-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 9999;
-  background: #fff;
+  background: linear-gradient(160deg, #0d1b2e 0%, #1a3a6e 55%, #2a6fc9 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -756,32 +759,52 @@ footer p { color: rgba(255,255,255,0.4); font-size: 0.8rem; font-style: italic; 
   padding: 2rem;
 }
 
-.intro-sig {
+.intro-sig-wrapper {
+  position: relative;
   width: min(90vw, 600px);
-  height: auto;
   aspect-ratio: 4000 / 2399;
+}
+
+.intro-sig {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.intro-done {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.intro-done.visible {
+  opacity: 1;
 }
 
 .intro-name {
   font-family: 'Noto Naskh Arabic', serif;
   font-size: clamp(1.4rem, 4vw, 2.2rem);
-  color: #1a1a2e;
+  color: #ffffff;
   margin: 0;
   opacity: 0;
-  animation: fadeInText 0.6s ease forwards;
-  animation-delay: 6.4s;   /* just after strokes finish */
+  transition: opacity 0.4s ease;
 }
 
 .intro-sub {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(0.85rem, 2vw, 1.1rem);
   letter-spacing: 0.15em;
-  color: #888;
+  color: rgba(255,255,255,0.7);
   text-transform: uppercase;
   margin: 0;
   opacity: 0;
-  animation: fadeInText 0.6s ease forwards;
-  animation-delay: 6.5s;
+  transition: opacity 0.4s ease 0.15s;
+}
+
+.intro-name.intro-text-show,
+.intro-sub.intro-text-show {
+  opacity: 1;
 }
 
 .intro-skip {
@@ -791,15 +814,12 @@ footer p { color: rgba(255,255,255,0.4); font-size: 0.8rem; font-style: italic; 
   font-family: 'Cormorant Garamond', serif;
   font-size: 0.85rem;
   letter-spacing: 0.1em;
-  color: #aaa;
+  color: rgba(255,255,255,0.5);
   cursor: pointer;
   text-transform: uppercase;
 }
 
 .intro-skip:hover {
-  color: #555;
+  color: #ffffff;
 }
 
-@keyframes fadeInText {
-  to { opacity: 1; }
-}
