@@ -117,6 +117,7 @@ let activeFilter = 'all';
 // ── BOOT ──
 document.addEventListener('DOMContentLoaded', () => {
   loadAllManifests();
+  bindLightbox();
   bindModal();
   bindContactForm();
   bindModalForm();
@@ -241,7 +242,7 @@ function buildItemHTML(item) {
         <div class="pdf-icon">⬜</div>
         <span class="pdf-label">PDF Document</span>
        </div>`
-    : `<div class="portfolio-artwork">
+    : `<div class="portfolio-artwork is-clickable">
         <img
           src="${item.path}"
           alt="${escapeHTML(item.title)}"
@@ -261,8 +262,10 @@ function buildItemHTML(item) {
   // Get button text translation
   const btnText = typeof getTranslation === 'function' ? getTranslation('form.sendRequest').replace(' →', '') : 'Request Similar';
 
+  const articleClick = isPDF ? '' : `onclick="openLightbox('${item.path}', '${escapeHTML(item.title)}')"`;
+
   return `
-    <article class="portfolio-item" data-filter="${escapeHTML(item.filter)}">
+    <article class="portfolio-item" data-filter="${escapeHTML(item.filter)}" ${articleClick}>
       ${artworkHTML}
       <div class="portfolio-item-info">
         <h3>${escapeHTML(item.title)}</h3>
@@ -271,7 +274,7 @@ function buildItemHTML(item) {
       <div class="portfolio-overlay">
         <p>${escapeHTML(item.description)}</p>
         <button class="btn-like"
-          onclick='openModal(${JSON.stringify(item.title)}, ${JSON.stringify(categoryLabelText)})'>
+          onclick='event.stopPropagation(); openModal(${JSON.stringify(item.title)}, ${JSON.stringify(categoryLabelText)})'>
           ${btnText} ✦
         </button>
         ${overlayExtra}
@@ -286,6 +289,40 @@ function bindFilterButtons() {
       applyFilter(this.dataset.filter);
     });
   });
+}
+
+// ── LIGHTBOX ──
+function bindLightbox() {
+  const lb = document.getElementById('lightbox');
+  if (!lb) return;
+  lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+  document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+}
+
+function openLightbox(src, alt) {
+  const lb  = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  lb.style.opacity = '0';
+  img.style.opacity = '0';
+  img.src = src;
+  img.alt = alt;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    lb.style.opacity = '1';           // backdrop fades in over 0.2s
+    setTimeout(() => {
+      img.style.opacity = '1';        // then image fades in over 0.5s
+    }, 200);
+  }));
+}
+
+function closeLightbox() {
+  const lb = document.getElementById('lightbox');
+  lb.classList.remove('open');
+  lb.style.opacity = '0';
+  document.getElementById('lightbox-img').style.opacity = '0';
+  document.body.style.overflow = '';
 }
 
 // ── MODAL ──
