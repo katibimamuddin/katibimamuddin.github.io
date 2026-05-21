@@ -1,15 +1,15 @@
 // ── intro.js ──────────────────────────────────────────────────────────────
 // Controls the loading screen overlay.
-// The SVG animation plays once (8.71s), strokes draw then hold.
-// After the last stroke (~7.47s) + a brief hold, loading_done.svg fades in.
+// The SVG animation plays once (5s), strokes draw then hold.
+// After all strokes finish (~2.25s) + a brief hold, loading_done.svg fades in.
 // Text appears after the done state has fully faded in.
 // ─────────────────────────────────────────────────────────────────────────
 
 (function () {
-  const SVG_DURATION   = 10210;  // ms — must match dur in loading.svg
+  const SVG_DURATION   = 5000;   // ms — must match dur in loading.svg
   const FADE_DELAY     = 200;    // ms after SVG ends before overlay fades
   const FADE_DURATION  = 800;    // ms for overlay to fade out
-  const DONE_DELAY     = 7800;   // ms — brief hold after last stroke (~7.47s)
+  const DONE_DELAY     = 2500;   // ms — brief hold after all strokes finish (~2.25s)
   const DONE_FADE_MS   = 600;    // ms — must match .intro-done CSS transition
 
   const overlay = document.getElementById('intro-overlay');
