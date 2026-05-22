@@ -273,6 +273,10 @@ function buildItemHTML(item) {
       </div>
       <div class="portfolio-overlay">
         <p>${escapeHTML(item.description)}</p>
+        ${isPDF ? '' : `<button class="btn-view-image"
+          onclick='event.stopPropagation(); openLightbox(${JSON.stringify(item.path)}, ${JSON.stringify(item.title)})'>
+          View Image ↗
+        </button>`}
         <button class="btn-like"
           onclick='event.stopPropagation(); openModal(${JSON.stringify(item.title)}, ${JSON.stringify(categoryLabelText)})'>
           ${btnText} ✦

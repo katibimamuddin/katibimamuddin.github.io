@@ -246,40 +246,25 @@ section { position: relative; z-index: 1; }
 
 .about-visual { display: flex; align-items: center; justify-content: center; }
 
-.calligraphy-frame {
-  border: 1px solid var(--border);
-  padding: 2.5rem;
-  position: relative;
+.bismillah-visual {
   text-align: center;
-  background: #f0f5ff;
+  width: 100%;
 }
 
-.calligraphy-frame::before,
-.calligraphy-frame::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-color: var(--gold);
-  border-style: solid;
-}
-
-.calligraphy-frame::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
-.calligraphy-frame::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
-
-.calligraphy-frame .arabic-large {
-  font-family: 'Noto Naskh Arabic', serif;
-  font-size: 4rem;
-  color: var(--gold);
+.bismillah-svg {
   display: block;
-  margin-bottom: 0.8rem;
+  width: 100%;
+  height: auto;
+  color: var(--gold);
 }
 
-.calligraphy-frame .arabic-sub {
+.bismillah-visual .arabic-sub {
   font-size: 0.8rem;
   letter-spacing: 0.1em;
   color: var(--muted);
   font-family: 'Cinzel', serif;
+  display: block;
+  margin-top: 0.8rem;
 }
 
 .services-list {
@@ -440,6 +425,26 @@ section { position: relative; z-index: 1; }
   color: #a8cff5;
   margin-bottom: 1.2rem;
   line-height: 1.6;
+}
+
+.btn-view-image {
+  display: none;
+  padding: 0.6rem 1.6rem;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.5);
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-view-image:hover { border-color: #fff; color: #fff; }
+
+@media (hover: none) and (pointer: coarse) {
+  .btn-view-image { display: block; }
 }
 
 .btn-like {
